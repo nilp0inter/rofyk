@@ -15,6 +15,7 @@ def parse_arguments() -> argparse.Namespace:
         default_config_files=config_file_locations,
     )
     parser.add_argument("--version", action="version", version="rofyk " + __version__)
+    parser.add_argument("--device", "-d", dest="device", action="store", default=None, help="Specify the YubiKey device to use")
     parser.add_argument(
         "--action",
         "-a",

@@ -10,7 +10,7 @@ from .ykman import Ykman
 class Rofyk(object):
     def __init__(self) -> None:
         self.args = parse_arguments()
-        self.ykman = Ykman()
+        self.ykman = Ykman(self.args.device)
         self.selector = Selector.best_option(self.args.selector)
         self.typer = Typer.best_option(self.args.typer)
         self.clipboarder = Clipboarder.best_option(self.args.clipboarder)
